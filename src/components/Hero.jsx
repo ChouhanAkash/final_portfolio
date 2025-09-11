@@ -32,12 +32,13 @@ export default function Hero() {
           {/* Buttons */}
           <div className="mt-6 flex gap-3">
             <a
-    href="/AkashResume.pdf"  
-    download="AkashResume" 
-    className="px-4 py-2 rounded-md bg-white text-teal-600 font-semibold hover:bg-gray-200 transition-colors duration-300"
-  >
-    Download Resume
-  </a>
+  href={`${import.meta.env.BASE_URL}AkashResume.pdf`}
+  download="AkashResume"
+  className="px-4 py-2 rounded-md bg-white text-teal-600 font-semibold hover:bg-gray-200 transition-colors duration-300"
+>
+  Download Resume
+</a>
+
 
             <a
               href="#project"
@@ -50,11 +51,12 @@ export default function Hero() {
 
         {/* Right Image */}
         <div className="flex justify-center">
-          <img
-            src="/images/profile.png"
-            alt="Akash"
-            className="w-64 h-64 rounded-lg object-cover shadow-2xl border-4 border-white"
-          />
+         <img 
+  src={`${import.meta.env.BASE_URL}images/profile.png`} 
+  alt="Akash"
+  className="w-64 h-64 rounded-lg object-cover shadow-2xl border-4 border-white"
+/>
+
         </div>
       </div>
     </section>
