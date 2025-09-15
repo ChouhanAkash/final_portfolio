@@ -2,7 +2,13 @@ import React, { useState } from 'react'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-  const links = ['Home', 'About Me', 'Skills', 'Project', 'Contact']
+  const links = [
+    { name: 'Home', id: 'home' },
+    { name: 'About Me', id: 'about-me' },
+    { name: 'Skills', id: 'skills' },
+    { name: 'Project', id: 'project' },
+    { name: 'Contact', id: 'contact' }
+  ]
 
   return (
     <header className="fixed top-0 w-full z-50">
@@ -21,17 +27,11 @@ export default function Navbar() {
           <div className="hidden md:flex gap-6 items-center">
             {links.map(l => (
               <a
-                key={l}
-                href={
-                  l === 'Home'
-                    ? '#home'
-                    : l === 'About Me'
-                    ? '#about-me'
-                    : `#${l.toLowerCase().replace(/ /g, '-')}`
-                }
+                key={l.id}
+                href={`#${l.id}`}
                 className="hover:text-gray-200 transition-colors duration-300 font-medium"
               >
-                {l}
+                {l.name}
               </a>
             ))}
           </div>
@@ -67,18 +67,12 @@ export default function Navbar() {
         >
           {links.map(l => (
             <a
-              key={l}
-              href={
-                l === 'Home'
-                  ? '#home'
-                  : l === 'About Me'
-                  ? '#about-me'
-                  : `#${l.toLowerCase().replace(/ /g, '-')}`
-              }
+              key={l.id}
+              href={`#${l.id}`}
               onClick={() => setOpen(false)}
               className="block py-3 px-4 text-white hover:text-gray-200 font-medium transition-colors duration-300"
             >
-              {l}
+              {l.name}
             </a>
           ))}
         </div>
