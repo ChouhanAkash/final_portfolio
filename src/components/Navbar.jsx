@@ -4,7 +4,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const links = [
     { name: 'Home', id: 'home' },
-    { name: 'About Me', id: 'home' },
+    { name: 'github-stats', id: 'github-stats' },
     { name: 'Skills', id: 'skills' },
     { name: 'Project', id: 'project' },
     { name: 'Contact', id: 'contact' }
