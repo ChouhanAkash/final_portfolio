@@ -22,7 +22,13 @@ export default function Navbar() {
             {links.map(l => (
               <a
                 key={l}
-                href={l === 'Home' ||'About Me' ? '#home' : `#${l.toLowerCase().replace(/ /g, '-')}`}
+                href={
+                  l === 'Home'
+                    ? '#home'
+                    : l === 'About Me'
+                    ? '#about-me'
+                    : `#${l.toLowerCase().replace(/ /g, '-')}`
+                }
                 className="hover:text-gray-200 transition-colors duration-300 font-medium"
               >
                 {l}
@@ -62,7 +68,13 @@ export default function Navbar() {
           {links.map(l => (
             <a
               key={l}
-              href={l === 'Home'||'About Me' ? '#home' : `#${l.toLowerCase().replace(/ /g, '-')}`}
+              href={
+                l === 'Home'
+                  ? '#home'
+                  : l === 'About Me'
+                  ? '#about-me'
+                  : `#${l.toLowerCase().replace(/ /g, '-')}`
+              }
               onClick={() => setOpen(false)}
               className="block py-3 px-4 text-white hover:text-gray-200 font-medium transition-colors duration-300"
             >
