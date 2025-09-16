@@ -63,7 +63,7 @@ export default function Hero() {
         <div className="flex justify-center">
           <div className="bg-white p-2 rounded-lg shadow-2xl">
             <img
-              src={`${import.meta.env.BASE_URL}images/profile.png`}
+              src={`${import.meta.env.BASE_URL}images/AkashProfile.png`}
               alt="Akash"
               className="w-64 h-64 md:w-80 md:h-80 max-w-full h-auto rounded-lg object-cover border-4 border-white"
             />
