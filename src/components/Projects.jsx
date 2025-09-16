@@ -1,9 +1,9 @@
-import React from 'react'
-import projects from '../data/projects'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
+import React from "react";
+import projects from "../data/projects";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function Projects() {
   return (
@@ -31,7 +31,7 @@ export default function Projects() {
                 slidesPerView={1}
                 autoplay={{ delay: 2500, disableOnInteraction: false }}
                 pagination={{ clickable: true }}
-                className="h-60 w-full" // Thoda bada height
+                className="h-60 w-full"
               >
                 {p.image.map((img, i) => (
                   <SwiperSlide key={i}>
@@ -39,6 +39,9 @@ export default function Projects() {
                       src={img}
                       alt={`${p.title}-${i}`}
                       className="h-60 w-full object-cover rounded-t-xl"
+                      onError={(e) =>
+                        (e.currentTarget.src = `${import.meta.env.BASE_URL}images/fallback.png`)
+                      }
                     />
                   </SwiperSlide>
                 ))}
@@ -46,7 +49,9 @@ export default function Projects() {
 
               {/* Project Details */}
               <div className="p-6 flex flex-col flex-1">
-                <h4 className="text-lg font-semibold text-gray-800">{p.title}</h4>
+                <h4 className="text-lg font-semibold text-gray-800">
+                  {p.title}
+                </h4>
                 <p className="text-sm text-gray-600 mt-2 flex-1">{p.desc}</p>
 
                 {/* Tech Stack */}
@@ -100,6 +105,6 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 

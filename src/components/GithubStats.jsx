@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function GithubStats() {
-  const username = "ChouhanAkash"; // ✅ Your GitHub username
+  const username = "ChouhanAkash"; 
 
   return (
     <section id="github-stats" className="py-16 bg-gradient-to-b from-gray-50 to-white">
