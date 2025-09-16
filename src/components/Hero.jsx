@@ -40,16 +40,26 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="mt-6 flex gap-3 flex-wrap">
+            {/* View Resume in New Tab */}
             <a
-              href={`${import.meta.env.BASE_URL}AkashResume.pdf`}
-              download="Akash-Chouhan-Resume.pdf"
+              href={`${import.meta.env.BASE_URL}Akash-Chouhan-Resume.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-md bg-white text-teal-600 font-semibold hover:bg-gray-200 transition-colors duration-300"
             >
+              View Resume
+            </a>
+
+            {/* Direct Download Resume */}
+            <a
+              href={`${import.meta.env.BASE_URL}Akash-Chouhan-Resume.pdf`}
+              download="Akash-Chouhan-Resume.pdf"
+              className="px-4 py-2 rounded-md bg-teal-600 text-white font-semibold hover:bg-teal-700 transition-colors duration-300"
+            >
               Download Resume
             </a>
 
+            {/* See Projects */}
             <a
               href="#project"
               className="px-4 py-2 rounded-md border border-white hover:bg-white hover:text-teal-600 transition-colors duration-300"
